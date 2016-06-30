@@ -12,6 +12,8 @@
 		D1A66F7D1D2574780024F038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A66F7B1D2574780024F038 /* Main.storyboard */; };
 		D1A66F7F1D2574780024F038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A66F7E1D2574780024F038 /* Assets.xcassets */; };
 		D1A66F821D2574780024F038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A66F801D2574780024F038 /* LaunchScreen.storyboard */; };
+		D1A66F8A1D25748C0024F038 /* TreeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A66F891D25748C0024F038 /* TreeTableView.swift */; };
+		D1A66F8C1D2574A20024F038 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A66F8B1D2574A20024F038 /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D1A66F7E1D2574780024F038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A66F811D2574780024F038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A66F831D2574780024F038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A66F891D25748C0024F038 /* TreeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableView.swift; sourceTree = "<group>"; };
+		D1A66F8B1D2574A20024F038 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				D1A66F7E1D2574780024F038 /* Assets.xcassets */,
 				D1A66F801D2574780024F038 /* LaunchScreen.storyboard */,
 				D1A66F831D2574780024F038 /* Info.plist */,
+				D1A66F891D25748C0024F038 /* TreeTableView.swift */,
+				D1A66F8B1D2574A20024F038 /* Node.swift */,
 			);
 			path = TreeTableView;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A66F8A1D25748C0024F038 /* TreeTableView.swift in Sources */,
 				D1A66F7A1D2574780024F038 /* ViewController.swift in Sources */,
 				D1A66F781D2574780024F038 /* AppDelegate.swift in Sources */,
+				D1A66F8C1D2574A20024F038 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
