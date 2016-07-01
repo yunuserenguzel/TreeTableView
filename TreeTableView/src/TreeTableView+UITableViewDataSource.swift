@@ -38,16 +38,14 @@ extension TreeTableView: UITableViewDelegate {
             let newPaths = pathBuilder.buildPaths(dataSource, parentPath: currentPath).tail
             let indexesToBeInserted = newPaths.indices.map { NSIndexPath(forRow: $0 + currentIndex + 1, inSection: 0) }
             paths.insertContentsOf(newPaths, at: currentIndex + 1)
-            tableView.insertRowsAtIndexPaths(indexesToBeInserted, withRowAnimation: .Bottom)
+            tableView.insertRowsAtIndexPaths(indexesToBeInserted, withRowAnimation: .Top)
         } else {
             let indexesToBeRemoved = paths.indices.flatMap({ index in
                 paths[index].isAncestor(currentPath) ? NSIndexPath(forRow: index, inSection: 0) : nil
             })
             paths = paths.filter { !$0.isAncestor(currentPath) }
-            tableView.deleteRowsAtIndexPaths(indexesToBeRemoved, withRowAnimation: .Bottom)
-            
+            tableView.deleteRowsAtIndexPaths(indexesToBeRemoved, withRowAnimation: .Top)
         }
-//        tableView.reloadData()
     }
     
 }

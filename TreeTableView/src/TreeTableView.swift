@@ -55,8 +55,10 @@ class TreeTableView: UIView {
     
     private func setupView() {
         addSubview(tableView)
+        tableView.tableFooterView = UIView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .None
     }
     
     override func layoutSubviews() {

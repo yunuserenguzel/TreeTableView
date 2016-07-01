@@ -15,7 +15,6 @@ protocol PathBuilder: class {
     func buildPaths(dataSource: TreeTableViewDataSource, parentPath: TreeTablePath) -> [TreeTablePath]
 }
 
-
 class ExplorePathBuilder: PathBuilder {
     
     func buildPaths(dataSource: TreeTableViewDataSource) -> [TreeTablePath] {

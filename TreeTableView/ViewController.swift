@@ -16,41 +16,70 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nodes = [
-            Node(title: "Parent 1", children: [
-                Node(title: "Child 1", children: [
-                    Node(title: "GrandChild 2"),
+            Node(title: "Parent", children: [
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
                     ]),
                 
-                Node(title: "Child 1", children: [
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2")
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
                     ])
                 ]),
-            Node(title: "Parent 1", children: [
-                Node(title: "Child 1", children: [
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2")
+            Node(title: "Parent ", children: [
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
                     ]),
-                Node(title: "Child 1", children: [
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2")
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
                     ])
                 ]),
-            Node(title: "Parent 1", children: [
-                Node(title: "Child 1", children: [
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2"),
-                    Node(title: "GrandChild 2")
+            Node(title: "Parent", children: [
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ])
+                ]),
+            Node(title: "Parent", children: [
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
                     ])
                 ]),
         ]
@@ -64,6 +93,7 @@ class ViewController: UIViewController {
         treeTableView.registerCell(TableViewCell.classForCoder(), forDepth: 2,
                                    forIdentifier: TableViewCell.Identifiers.SubTitle)
         treeTableView.dataSource = self
+        
     }
     
     func findNode(path: [Int], fromNode node: Node? = nil) -> Node? {
@@ -98,6 +128,7 @@ extension ViewController: TreeTableViewDataSource {
     func treeTableView(didDequeCell cell: UITableViewCell, forPath path: TreeTablePath) {
         cell.textLabel?.text = findNode(path.indexes)?.title
     }
+    
 }
 
 
