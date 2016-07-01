@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, TreeTableViewDataSource {
+class ViewController: UIViewController {
 
     var nodes = [Node]()
+    lazy var treeTableView = TreeTableView(style: TreeTableViewStyle.Explore)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,9 @@ class ViewController: UIViewController, TreeTableViewDataSource {
             Node(title: "Parent 1", children: [
                 Node(title: "Child 1", children: [
                     Node(title: "GrandChild 2"),
+                    ]),
+                
+                Node(title: "Child 1", children: [
                     Node(title: "GrandChild 2"),
                     Node(title: "GrandChild 2")
                     ])
@@ -31,6 +35,10 @@ class ViewController: UIViewController, TreeTableViewDataSource {
                 Node(title: "Child 1", children: [
                     Node(title: "GrandChild 2"),
                     Node(title: "GrandChild 2"),
+                    Node(title: "GrandChild 2"),
+                    Node(title: "GrandChild 2"),
+                    Node(title: "GrandChild 2"),
+                    Node(title: "GrandChild 2"),
                     Node(title: "GrandChild 2")
                     ])
                 ]),
@@ -38,16 +46,34 @@ class ViewController: UIViewController, TreeTableViewDataSource {
                 Node(title: "Child 1", children: [
                     Node(title: "GrandChild 2"),
                     Node(title: "GrandChild 2"),
+                    Node(title: "GrandChild 2"),
+                    Node(title: "GrandChild 2"),
+                    Node(title: "GrandChild 2"),
+                    Node(title: "GrandChild 2"),
                     Node(title: "GrandChild 2")
                     ])
                 ]),
         ]
         
-        // Do any additional setup after loading the view, typically from a nib.
+        view.addSubview(treeTableView)
+        treeTableView.frame = view.bounds
+        treeTableView.registerCell(TableViewCell.classForCoder(), forDepth: 0,
+                                   forIdentifier: TableViewCell.Identifiers.Header)
+        treeTableView.registerCell(TableViewCell.classForCoder(), forDepth: 1,
+                                   forIdentifier: TableViewCell.Identifiers.Title)
+        treeTableView.registerCell(TableViewCell.classForCoder(), forDepth: 2,
+                                   forIdentifier: TableViewCell.Identifiers.SubTitle)
+        treeTableView.dataSource = self
     }
     
-    func findNode(parent: Node, path: [Int]) -> Node {
-        return nodes.first!
+    func findNode(path: [Int], fromNode node: Node? = nil) -> Node? {
+        if path.count == 0 {
+            return node
+        } else if path.count > 0 {
+            let nodes = node?.children ?? self.nodes
+            return findNode(path.tail, fromNode: nodes[path.first!])
+        }
+        return nil
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,16 +81,23 @@ class ViewController: UIViewController, TreeTableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
 
-    func treeTableView(treeTableView _: TreeTableView, numberOfChildrenNodesOfPath Path: TreeTablePath) -> Int? {
-        guard let tailPath = Path.tailPath else { return nil }
-        let node = findNode(nodes[Path.parentIndex], path: tailPath.indexes)
+}
+
+
+extension ViewController: TreeTableViewDataSource {
+    
+    func treeTableView(numberOfChildrenNodesOfPath Path: TreeTablePath) -> Int? {
+        let node = findNode(Path.indexes)!
         return node.children.count
     }
     
-    func numberOfParentNodes(treeTableView _: TreeTableView) -> Int {
+    func numberOfParentNodes() -> Int {
         return nodes.count
     }
     
-
+    func treeTableView(didDequeCell cell: UITableViewCell, forPath path: TreeTablePath) {
+        cell.textLabel?.text = findNode(path.indexes)?.title
+    }
 }
+
 

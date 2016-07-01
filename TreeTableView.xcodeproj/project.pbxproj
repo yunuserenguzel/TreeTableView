@@ -7,16 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE918D471D25C13B00B5F69A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D461D25C13B00B5F69A /* TableViewCell.swift */; };
+		AE918D4A1D25C39B00B5F69A /* TreeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D491D25C39B00B5F69A /* TreeTableView.swift */; };
+		AE918D4C1D25C3B300B5F69A /* TreeTablePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D4B1D25C3B300B5F69A /* TreeTablePath.swift */; };
+		AE918D4E1D25C3E700B5F69A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D4D1D25C3E700B5F69A /* Extensions.swift */; };
+		AE918D501D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D4F1D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift */; };
+		AE918D521D25C43100B5F69A /* TreeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D511D25C43100B5F69A /* TreeTableViewDataSource.swift */; };
+		AE918D541D25DF3800B5F69A /* PathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D531D25DF3800B5F69A /* PathBuilder.swift */; };
 		D1A66F781D2574780024F038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A66F771D2574780024F038 /* AppDelegate.swift */; };
 		D1A66F7A1D2574780024F038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A66F791D2574780024F038 /* ViewController.swift */; };
 		D1A66F7D1D2574780024F038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A66F7B1D2574780024F038 /* Main.storyboard */; };
 		D1A66F7F1D2574780024F038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A66F7E1D2574780024F038 /* Assets.xcassets */; };
 		D1A66F821D2574780024F038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A66F801D2574780024F038 /* LaunchScreen.storyboard */; };
-		D1A66F8A1D25748C0024F038 /* TreeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A66F891D25748C0024F038 /* TreeTableView.swift */; };
 		D1A66F8C1D2574A20024F038 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A66F8B1D2574A20024F038 /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE918D461D25C13B00B5F69A /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		AE918D491D25C39B00B5F69A /* TreeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableView.swift; sourceTree = "<group>"; };
+		AE918D4B1D25C3B300B5F69A /* TreeTablePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTablePath.swift; sourceTree = "<group>"; };
+		AE918D4D1D25C3E700B5F69A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AE918D4F1D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TreeTableView+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		AE918D511D25C43100B5F69A /* TreeTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableViewDataSource.swift; sourceTree = "<group>"; };
+		AE918D531D25DF3800B5F69A /* PathBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathBuilder.swift; sourceTree = "<group>"; };
 		D1A66F741D2574780024F038 /* TreeTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A66F771D2574780024F038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A66F791D2574780024F038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,7 +37,6 @@
 		D1A66F7E1D2574780024F038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A66F811D2574780024F038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A66F831D2574780024F038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1A66F891D25748C0024F038 /* TreeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableView.swift; sourceTree = "<group>"; };
 		D1A66F8B1D2574A20024F038 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE918D481D25C38000B5F69A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AE918D491D25C39B00B5F69A /* TreeTableView.swift */,
+				AE918D4B1D25C3B300B5F69A /* TreeTablePath.swift */,
+				AE918D4D1D25C3E700B5F69A /* Extensions.swift */,
+				AE918D4F1D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift */,
+				AE918D511D25C43100B5F69A /* TreeTableViewDataSource.swift */,
+				AE918D531D25DF3800B5F69A /* PathBuilder.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		D1A66F6B1D2574780024F038 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +83,15 @@
 		D1A66F761D2574780024F038 /* TreeTableView */ = {
 			isa = PBXGroup;
 			children = (
+				AE918D481D25C38000B5F69A /* src */,
 				D1A66F771D2574780024F038 /* AppDelegate.swift */,
 				D1A66F791D2574780024F038 /* ViewController.swift */,
 				D1A66F7B1D2574780024F038 /* Main.storyboard */,
 				D1A66F7E1D2574780024F038 /* Assets.xcassets */,
 				D1A66F801D2574780024F038 /* LaunchScreen.storyboard */,
 				D1A66F831D2574780024F038 /* Info.plist */,
-				D1A66F891D25748C0024F038 /* TreeTableView.swift */,
 				D1A66F8B1D2574A20024F038 /* Node.swift */,
+				AE918D461D25C13B00B5F69A /* TableViewCell.swift */,
 			);
 			path = TreeTableView;
 			sourceTree = "<group>";
@@ -141,10 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A66F8A1D25748C0024F038 /* TreeTableView.swift in Sources */,
+				AE918D4C1D25C3B300B5F69A /* TreeTablePath.swift in Sources */,
+				AE918D4A1D25C39B00B5F69A /* TreeTableView.swift in Sources */,
+				AE918D471D25C13B00B5F69A /* TableViewCell.swift in Sources */,
 				D1A66F7A1D2574780024F038 /* ViewController.swift in Sources */,
+				AE918D541D25DF3800B5F69A /* PathBuilder.swift in Sources */,
 				D1A66F781D2574780024F038 /* AppDelegate.swift in Sources */,
+				AE918D521D25C43100B5F69A /* TreeTableViewDataSource.swift in Sources */,
 				D1A66F8C1D2574A20024F038 /* Node.swift in Sources */,
+				AE918D501D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift in Sources */,
+				AE918D4E1D25C3E700B5F69A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +326,7 @@
 				D1A66F881D2574780024F038 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
