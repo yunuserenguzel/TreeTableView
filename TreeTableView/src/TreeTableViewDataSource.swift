@@ -8,12 +8,28 @@
 
 import UIKit
 
-protocol TreeTableViewDataSource: class {
+public protocol TreeTableViewDataSource: class {
     
     func treeTableView(numberOfChildrenNodesOfPath path: TreeTablePath) -> Int?
     
-    func numberOfParentNodes() -> Int
+    func treeTableNumberOfParentNodes() -> Int
     
     func treeTableView(didDequeCell cell: UITableViewCell, forPath path: TreeTablePath)
+    
+    func treeTableshouldExpand(path: TreeTablePath) -> Bool
+    
+    func treeTableshouldCollapse(Path: TreeTablePath) -> Bool
+    
+}
+
+extension TreeTableViewDataSource {
+    
+    func treeTableshouldExpand(path: TreeTablePath) -> Bool {
+        return true
+    }
+    
+    func treeTableshouldCollapse(Path: TreeTablePath) -> Bool {
+        return true
+    }
     
 }

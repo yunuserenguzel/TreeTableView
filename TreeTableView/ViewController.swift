@@ -8,13 +8,38 @@
 
 import UIKit
 
+
+class ExploreViewController: ViewController {
+    
+    override func initializeTreeTableView() {
+        treeTableView = TreeTableView(style: TreeTableViewStyle.Explore)
+    }
+    
+}
+
+class FocusViewController: ViewController {
+    
+    override func initializeTreeTableView() {
+        treeTableView = TreeTableView(style: TreeTableViewStyle.Focused)
+    }
+    
+}
+
+class CompactViewController: ViewController {
+    
+    override func initializeTreeTableView() {
+        treeTableView = TreeTableView(style: TreeTableViewStyle.Compact)
+    }
+}
+
 class ViewController: UIViewController {
 
     var nodes = [Node]()
-    lazy var treeTableView = TreeTableView(style: TreeTableViewStyle.Explore)
+    var treeTableView: TreeTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeTreeTableView()
         nodes = [
             Node(title: "Parent", children: [
                 Node(title: "Child", children: [
@@ -96,6 +121,10 @@ class ViewController: UIViewController {
         
     }
     
+    func initializeTreeTableView() {
+        
+    }
+    
     func findNode(path: [Int], fromNode node: Node? = nil) -> Node? {
         if path.count == 0 {
             return node
@@ -121,7 +150,7 @@ extension ViewController: TreeTableViewDataSource {
         return node.children.count
     }
     
-    func numberOfParentNodes() -> Int {
+    func treeTableNumberOfParentNodes() -> Int {
         return nodes.count
     }
     

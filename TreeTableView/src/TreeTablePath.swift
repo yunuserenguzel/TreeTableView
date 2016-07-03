@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TreeTablePath {
+public struct TreeTablePath: Equatable, CustomStringConvertible {
     
     let indexes: [Int]
     var expanded: Bool
@@ -20,13 +20,28 @@ struct TreeTablePath {
     
 }
 
+public func ==(lhs: TreeTablePath, rhs: TreeTablePath) -> Bool {
+    return lhs.indexes == rhs.indexes
+}
+
+typealias Tree = [TreeTablePath]
+
 extension TreeTablePath {
+    
+    var collapsed: Bool {
+        get {
+            return !expanded
+        }
+        set(newValue) {
+            expanded = !newValue
+        }
+    }
     
     var depth: Int {
         return indexes.count
     }
     
-    var parentIndex: Int! {
+    var rootIndex: Int! {
         return indexes.first
     }
     
@@ -38,9 +53,18 @@ extension TreeTablePath {
         return TreeTablePath(indexes: indexes + [index])
     }
     
-    func isAncestor(path: TreeTablePath) -> Bool {
-        guard depth > path.depth && path.depth > 0 else { return false }
-        return path.indexes.indices.reduce(true) { $0 && self.indexes[$1] == path.indexes[$1] }
+    func isAncestorOf(child: TreeTablePath) -> Bool {
+        guard depth < child.depth else { return false }
+        return indexes.indices.reduce(true) { $0 && self.indexes[$1] == child.indexes[$1] }
+    }
+    
+    func isParentOf(child: TreeTablePath) -> Bool {
+        guard depth == child.depth - 1 else { return false }
+        return indexes.indices.reduce(true) { $0 && self.indexes[$1] == child.indexes[$1] }
     }
 
+    public var description: String {
+        return "Path: " + indexes.reduce("") { $0 + "\($1)" }
+    }
+    
 }

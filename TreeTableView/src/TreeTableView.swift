@@ -16,39 +16,39 @@ enum TreeTableViewStyle {
     
 }
 
-class TreeTableView: UIView {
+public class TreeTableView: UIView {
     
     private lazy var tableView = UITableView(frame: CGRect.zero, style: .Plain)
     
     let style: TreeTableViewStyle
     
-    internal let pathBuilder: PathBuilder
+    internal var treeTableController: TreeTableController!
     
-    internal var paths = [TreeTablePath]()
-    
-    internal var registeredCells = [Int: String]()
-    
-    weak var dataSource: TreeTableViewDataSource? {
-        didSet {
-            guard let dataSource = self.dataSource else { return }
-            dispatch_async(dispatch_get_main_queue()) {
-                self.paths = self.pathBuilder.buildPaths(dataSource)
-                self.tableView.reloadData()
-            }
+    public weak var dataSource: TreeTableViewDataSource? {
+        get {
+            return treeTableController.dataSource
+        }
+        set {
+            treeTableController.dataSource = newValue
         }
     }
     
     init(style: TreeTableViewStyle) {
         self.style = style
-        self.pathBuilder = ExplorePathBuilder()
         super.init(frame: CGRect.zero)
+        switch style {
+        case .Focused:
+            self.treeTableController = TreeTableFocusController(tableView: tableView)
+        case .Compact:
+            self.treeTableController = TreeTableCompactController(tableView: tableView)
+        default:
+            self.treeTableController = TreeTableExploreController(tableView: tableView)
+        }
         setupView()
     }
     
-    
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         self.style = .Explore
-        self.pathBuilder = ExplorePathBuilder()
         super.init(coder: aDecoder)
         setupView()
     }
@@ -56,25 +56,21 @@ class TreeTableView: UIView {
     private func setupView() {
         addSubview(tableView)
         tableView.tableFooterView = UIView()
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.dataSource = treeTableController
+        tableView.delegate = treeTableController
         tableView.separatorStyle = .None
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         tableView.frame = bounds
         super.layoutSubviews()
     }
     
     func registerCell(cellClass: AnyClass, forDepth depth: Int, forIdentifier identifier: String) {
-        registeredCells[depth] = identifier
         tableView.registerClass(cellClass, forCellReuseIdentifier: identifier)
+        treeTableController.registerCell(depth: depth, identifier: identifier)
     }
-    
-    private func numberOfNodes() -> Int {
-        return paths.count
-    }
-    
+
 }
 
 

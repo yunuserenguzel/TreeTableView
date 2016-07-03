@@ -19,6 +19,7 @@ extension Int {
 extension Array {
     
     var tail: [Element] {
+        guard count > 1 else { return [] }
         let range = (1..<count)
         return Array(self[range])
     }

@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE07E8341D29563300105CD9 /* TreeTableCompactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E8331D29563300105CD9 /* TreeTableCompactController.swift */; };
+		AE07E8361D29564300105CD9 /* TreeTableFocusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07E8351D29564300105CD9 /* TreeTableFocusController.swift */; };
 		AE918D471D25C13B00B5F69A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D461D25C13B00B5F69A /* TableViewCell.swift */; };
 		AE918D4A1D25C39B00B5F69A /* TreeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D491D25C39B00B5F69A /* TreeTableView.swift */; };
 		AE918D4C1D25C3B300B5F69A /* TreeTablePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D4B1D25C3B300B5F69A /* TreeTablePath.swift */; };
 		AE918D4E1D25C3E700B5F69A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D4D1D25C3E700B5F69A /* Extensions.swift */; };
-		AE918D501D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D4F1D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift */; };
 		AE918D521D25C43100B5F69A /* TreeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D511D25C43100B5F69A /* TreeTableViewDataSource.swift */; };
-		AE918D541D25DF3800B5F69A /* PathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D531D25DF3800B5F69A /* PathBuilder.swift */; };
+		AE918D591D27D88100B5F69A /* TreeTableExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D581D27D88100B5F69A /* TreeTableExploreController.swift */; };
+		AE918D5B1D27D89500B5F69A /* TreeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE918D5A1D27D89500B5F69A /* TreeTableController.swift */; };
 		D1A66F781D2574780024F038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A66F771D2574780024F038 /* AppDelegate.swift */; };
 		D1A66F7A1D2574780024F038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A66F791D2574780024F038 /* ViewController.swift */; };
 		D1A66F7D1D2574780024F038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A66F7B1D2574780024F038 /* Main.storyboard */; };
@@ -23,13 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE07E8331D29563300105CD9 /* TreeTableCompactController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableCompactController.swift; sourceTree = "<group>"; };
+		AE07E8351D29564300105CD9 /* TreeTableFocusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableFocusController.swift; sourceTree = "<group>"; };
 		AE918D461D25C13B00B5F69A /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		AE918D491D25C39B00B5F69A /* TreeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableView.swift; sourceTree = "<group>"; };
 		AE918D4B1D25C3B300B5F69A /* TreeTablePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTablePath.swift; sourceTree = "<group>"; };
 		AE918D4D1D25C3E700B5F69A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		AE918D4F1D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TreeTableView+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		AE918D511D25C43100B5F69A /* TreeTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableViewDataSource.swift; sourceTree = "<group>"; };
-		AE918D531D25DF3800B5F69A /* PathBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathBuilder.swift; sourceTree = "<group>"; };
+		AE918D581D27D88100B5F69A /* TreeTableExploreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableExploreController.swift; sourceTree = "<group>"; };
+		AE918D5A1D27D89500B5F69A /* TreeTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableController.swift; sourceTree = "<group>"; };
 		D1A66F741D2574780024F038 /* TreeTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A66F771D2574780024F038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A66F791D2574780024F038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,14 +58,24 @@
 		AE918D481D25C38000B5F69A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				AE918D571D27D88100B5F69A /* controllers */,
 				AE918D491D25C39B00B5F69A /* TreeTableView.swift */,
+				AE918D511D25C43100B5F69A /* TreeTableViewDataSource.swift */,
 				AE918D4B1D25C3B300B5F69A /* TreeTablePath.swift */,
 				AE918D4D1D25C3E700B5F69A /* Extensions.swift */,
-				AE918D4F1D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift */,
-				AE918D511D25C43100B5F69A /* TreeTableViewDataSource.swift */,
-				AE918D531D25DF3800B5F69A /* PathBuilder.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		AE918D571D27D88100B5F69A /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE918D5A1D27D89500B5F69A /* TreeTableController.swift */,
+				AE918D581D27D88100B5F69A /* TreeTableExploreController.swift */,
+				AE07E8351D29564300105CD9 /* TreeTableFocusController.swift */,
+				AE07E8331D29563300105CD9 /* TreeTableCompactController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		D1A66F6B1D2574780024F038 = {
@@ -168,14 +182,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE918D4C1D25C3B300B5F69A /* TreeTablePath.swift in Sources */,
+				AE07E8341D29563300105CD9 /* TreeTableCompactController.swift in Sources */,
 				AE918D4A1D25C39B00B5F69A /* TreeTableView.swift in Sources */,
 				AE918D471D25C13B00B5F69A /* TableViewCell.swift in Sources */,
 				D1A66F7A1D2574780024F038 /* ViewController.swift in Sources */,
-				AE918D541D25DF3800B5F69A /* PathBuilder.swift in Sources */,
+				AE918D5B1D27D89500B5F69A /* TreeTableController.swift in Sources */,
+				AE07E8361D29564300105CD9 /* TreeTableFocusController.swift in Sources */,
 				D1A66F781D2574780024F038 /* AppDelegate.swift in Sources */,
 				AE918D521D25C43100B5F69A /* TreeTableViewDataSource.swift in Sources */,
+				AE918D591D27D88100B5F69A /* TreeTableExploreController.swift in Sources */,
 				D1A66F8C1D2574A20024F038 /* Node.swift in Sources */,
-				AE918D501D25C40400B5F69A /* TreeTableView+UITableViewDataSource.swift in Sources */,
 				AE918D4E1D25C3E700B5F69A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
