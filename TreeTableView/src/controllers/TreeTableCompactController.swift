@@ -11,10 +11,11 @@ import UIKit
 internal class TreeTableCompactController: TreeTableController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         let currentIndex = indexPath.row
+        guard dataSource?.treeTableView(numberOfChildrenNodesOfPath: tree[currentIndex]) > 0 else { return }
         tree[currentIndex].expanded = !tree[currentIndex].expanded
         let currentPath = tree[currentIndex]
+        
         
         if currentPath.expanded {
             

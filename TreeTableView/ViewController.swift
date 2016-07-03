@@ -41,6 +41,83 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         initializeTreeTableView()
         nodes = [
+            Node(title: "Parent ", children: [
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ])
+                ]),
+            Node(title: "Parent", children: [
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ]),
+                Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child")
+                    ])
+                ]),
             Node(title: "Parent", children: [
                 Node(title: "Child", children: [
                     Node(title: "Grand Child"),
@@ -51,8 +128,12 @@ class ViewController: UIViewController {
                     Node(title: "Grand Child")
                     ])
                 ]),
-            Node(title: "Parent ", children: [
+            Node(title: "Parent", children: [
                 Node(title: "Child", children: [
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
+                    Node(title: "Grand Child"),
                     Node(title: "Grand Child"),
                     Node(title: "Grand Child"),
                     Node(title: "Grand Child")
